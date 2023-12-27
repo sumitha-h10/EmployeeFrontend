@@ -1,0 +1,9 @@
+<h2>Employee Feedbacks</h2>
+<div *ngFor="let feedback of feedbacks">
+  <h3>{{ feedback.feedbackTitle }}</h3>
+  <p>{{ feedback.feedbackContent }}</p>
+  <p><strong>Date:</strong> {{ feedback.feedbackDate | date }}</p>
+  <p><strong>Employee ID:</strong> {{ feedback.employeeId }}</p>
+  <hr>
+</div>
+

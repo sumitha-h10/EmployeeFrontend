@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert = "fragments::pageHeader">
+<meta charset="ISO-8859-1">
+
+<title>Employee Management System</title>
+
+</head>
+<body>
+	<div th:fragment="menu">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+				<a routerLink="/index" class="nav-link">Home</a>
+				<a routerLink="/create-employee" class="nav-link">Create User</a>
+				<a routerLink="/update-employee/:id" class="nav-link">Update-employee</a>
+				<a routerLink="/employee-details/:id" class="nav-link">Employee-details</a>
+                <a routerLink="/Aboutus" class="nav-link">Aboutus</a>
+                <a routerLink="/registration" class="nav-link">Login</a>
+                <a routerLink="/registration" class="nav-link">Sign Up</a>
+			</nav>
+			  
+		</header>
+	</div>
+	<div th:fragment="pageFooter">
+		<footer class="footer">
+			<div class="container">
+				<span class="text-warning text-upercase"><marquee style = "font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Vehicle Insurance Provides You The Secure Life.</marquee></span>
+			</div>
+		</footer>
+	</div>
+	
+
+<div th:replace="fragments::menu"> </div>
+
+
+	<div>
+			<div id="carouselExampleIndicators" class="carousel slide"
+				data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100 img-fluid" style="height: 615px;"
+							src="data:image/jpeg;base64,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" alt="First slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h1 class="text-dark">
+								<strong>Employee Management System</strong>
+							</h1>
+							<p class="text-dark">
+								<b></b>
+							</p>
+						</div>
+					</div>
+					
+		
+					
+				</div>
+				
+			</div>
+		</div>
+		
+	
+	<div th:replace="fragments::pageFooter"></div>
+	
+</body>
+</html>
